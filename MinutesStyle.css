@@ -1,11 +1,12 @@
 /* Setting max width for doc */
 *{
     max-width: 100vw;
-    min-width: 50vw;
+    min-width: 5vw;
 }
 
 /* Styling the heading */
 .title{
+    position: static;
     text-align: center;
     background-color: hsla(0, 84%, 49%, 0.856);
     border-width: 0.5px; 
@@ -30,6 +31,7 @@ h3,h4{
 
 /* Styling the Form */
 #form{
+    position: relative;
     display: block;
     background-color: rgba(9, 13, 230, 0.432);
     padding: 5px 5px, 5px, 5px;
@@ -89,3 +91,54 @@ a[href="#Misc"]{
     color: black;
 }
 
+/* Media Query for devices on landscape to ensure height of objects doesnt take too much of screen */
+@media (orientation: landscape){
+    *{
+        max-height: 75 vh;
+    }
+}
+
+/* Flex box for pictures on bottom */
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+/* Grid container that will hold the audio and video recordings */
+.gridContainer{
+    display: grid;
+    grid-row-gap: 1cm;
+    grid-column-gap: 10px;
+    width: 800px;
+
+}
+
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.item2{
+    grid-column-start:2;
+    grid-column-end:3;
+}
+
+.item3{
+    grid-column-start:3;
+    grid-column-end:4;
+}
+
+/* Using adjacend sibling selector to style the h2 in the header */
+h1 + h2{
+    font-weight: bold;
+    background-color:hsla(231, 61%, 43%, 0.808);
+}
+
+/* Using general sibling selector to style paragraphs */
+/* Particularly aligns the paragraph that appears after the image */
+h3 ~ p{
+    text-align: center;
+}
