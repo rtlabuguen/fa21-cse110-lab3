@@ -40,3 +40,14 @@ h3,h4{
     border-color:rgba(9, 13, 230, 0.432);
     width: 50%;
 }
+
+/* Styling sections with the "roll" attribute */
+
+
+p > img{
+    margin: 10px 10px 10px 10px
+    display: inline-block;
+    border-style: dashed;
+    border-width: 3px;
+    border-color: rgb(15, 54, 226);
+}
